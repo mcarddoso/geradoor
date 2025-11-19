@@ -30,7 +30,7 @@ const NavbarSection: React.FC = () => {
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <div className="bg-background dark:bg-primary-dark-2 pointer-events-auto relative mx-auto w-full flex h-full items-center overflow-y-scroll rounded-[14px] px-2 py-2 shadow-[rgba(142,140,152,0.2)_0px_0px_30px,rgba(219,216,224,0.2)_0px_0px_0px_1px] dark:shadow-[rgba(111,109,120,0.1)_0px_0px_30px,rgba(60,57,63,0.4)_0px_0px_0px_1px] sm:overflow-y-visible">
-        <Button variant="link">
+        <Button variant="ghost" className='hover:bg-transparent'>
           <DoorOpen className="w-4 h-4" />
           Geradoor
         </Button>

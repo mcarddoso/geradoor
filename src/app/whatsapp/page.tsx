@@ -7,11 +7,9 @@ import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 import { QRCodeSVG } from "qrcode.react";
-import FooterSection from "@/components/FooterSection";
 import NavbarSection from "@/components/NavbarSection";
-import { ArrowLeft, Copy, Loader, Send } from "lucide-react";
+import { Copy, Loader, Send } from "lucide-react";
 import { PhoneInput } from "@/components/PhoneInput";
-import { Label } from "@/components/ui/label";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import {
   ResizableHandle,
@@ -135,9 +133,6 @@ const WhatsappLinkGenerator: React.FC = () => {
     img.src = "data:image/svg+xml;base64," + btoa(svgData);
   };
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
 
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen relative overflow-hidden px-8">
@@ -340,7 +335,6 @@ const WhatsappLinkGenerator: React.FC = () => {
         </div>
       </motion.div>
 
-      <FooterSection toggleTheme={toggleTheme} />
     </div>
   );
 };

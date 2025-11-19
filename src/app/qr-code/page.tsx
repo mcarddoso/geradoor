@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 import { QRCodeSVG } from "qrcode.react"; // Importando corretamente
-import FooterSection from "@/components/FooterSection";
 import NavbarSection from "@/components/NavbarSection";
 import { ArrowLeft, Loader } from "lucide-react";
 import { v4 as uuidv4 } from "uuid";
@@ -114,9 +113,6 @@ const QRCodeGenerator: React.FC = () => {
     }
   };  
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
 
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen relative overflow-hidden px-8">
@@ -197,7 +193,6 @@ const QRCodeGenerator: React.FC = () => {
         </motion.div>
       )}
 
-      <FooterSection toggleTheme={toggleTheme} />
     </div>
   );
 };

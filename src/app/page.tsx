@@ -7,7 +7,6 @@ import { formatCPF, generateCPF } from './utils/cpf_gen';
 import { Input } from '@/components/ui/input';
 import { toast } from "sonner";
 import { motion } from 'framer-motion';
-import FooterSection from '@/components/FooterSection';
 import NavbarSection from '@/components/NavbarSection';
 
 const CPFGenerator: React.FC = () => {
@@ -28,9 +27,6 @@ const CPFGenerator: React.FC = () => {
     setCpf(newCpf);
   };
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(cpf);
@@ -76,7 +72,6 @@ const CPFGenerator: React.FC = () => {
           </Button>
         </div>
       </motion.div>
-      <FooterSection toggleTheme={toggleTheme} />
     </div>
   );
 };

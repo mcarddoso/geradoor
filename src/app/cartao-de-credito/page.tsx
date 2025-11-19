@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/select"
 import { toast } from "sonner";
 import { motion } from 'framer-motion';
-import FooterSection from '@/components/FooterSection';
 import NavbarSection from '@/components/NavbarSection';
 import { generateCreditCard } from '../utils/credit_card_gen';
 import { Clipboard } from 'lucide-react';
@@ -44,9 +43,6 @@ const CartaoDeCreditoGenerator: React.FC = () => {
     setCardData(newCard);
   };
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
 
   const copyToClipboard = (text: string, type: string) => {
     navigator.clipboard.writeText(text);
@@ -167,7 +163,6 @@ const CartaoDeCreditoGenerator: React.FC = () => {
           </div>
         </div>
       </motion.div>
-      <FooterSection toggleTheme={toggleTheme} />
     </div>
   );
 };

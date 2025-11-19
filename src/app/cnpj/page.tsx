@@ -7,7 +7,6 @@ import { formatCNPJ, generateCNPJ } from '../utils/cnpj_gen';
 import { Input } from '@/components/ui/input';
 import { toast } from "sonner";
 import { motion } from 'framer-motion';
-import FooterSection from '@/components/FooterSection';
 import NavbarSection from '@/components/NavbarSection';
 
 const CNPJGenerator: React.FC = () => {
@@ -28,9 +27,6 @@ const CNPJGenerator: React.FC = () => {
     setCnpj(newCpf);
   };
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(cnpj);
@@ -76,7 +72,6 @@ const CNPJGenerator: React.FC = () => {
           </Button>
         </div>
       </motion.div>
-      <FooterSection toggleTheme={toggleTheme} />
     </div>
   );
 };
